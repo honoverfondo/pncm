@@ -1,0 +1,28 @@
+﻿@model MarcaModel
+@{
+    ViewData["title"] = "Editar Marcas";
+}
+
+<div class="conteiner">
+
+    <div class="mb-5 text-center">
+
+        <h1 class="text-light">Editar marca</h1>
+    </div>
+    <form method="post" asp-controller="Marca" asp-action="Editar">
+        <input type="hidden" asp-for=Id />
+
+        <div class="mb-3">
+            <label for="Descricao" class="form-label">Nome da Marca</label>
+            <input type="text" class="form-control" asp-for="Descricao" id="Descricao" placeholder="Digite a marca">
+            <span class="text-danger" asp-validation-for="Descricao"></span>
+        </div>
+
+        <div class="d-flex gap-1 mt-1">
+            <button type="submit" class="btn btn-success w-20">Editar</button>
+            <button type="submit" class="btn btn-primary w-20" asp-controller="Marca" asp-action="Index">Voltar</button>
+
+        </div>
+    </form>
+
+</div>

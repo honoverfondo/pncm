@@ -1,0 +1,51 @@
+﻿@model MarcaModel 
+@{
+    ViewData["title"] = "Cadastrar Marcas";
+}
+
+<div class="conteiner">
+
+    <div class="mb-5 text-center">
+
+        <h1 class="text-light">Cadastro de nona marca</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+
+            <form method="post" asp-controller="Marca" asp-action="Cadastrar">
+                <div class="card">
+                    <div class="card-header">Marca Equipamento</div>
+
+                    
+
+                </div>
+                <div class="mb-3">
+                    <label for="Descricao" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="Descricao" id="Descricao" placeholder="Digite a marca">
+                    <span class="text-danger" asp-validation-for="Descricao"></span>
+                </div>
+
+                <div class="d-flex gap-1 mt-1">
+                    <a class="btn btn-success salvar w-20">Salvar</a>
+                    <button type="submit" class="btn btn-primary w-20" asp-controller="Marca" asp-action="Index">Voltar</button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+    
+   
+</div>
+
+
+<script>
+
+
+    $(document).ready(function () {
+
+        $('.salvar').on('click', function () {
+            
+        })
+    })
+</script>
